@@ -11,6 +11,7 @@ def predict(
     payload: TitleInput,
     service: FakeNewsDetectorService = Depends(get_fake_news_detector_service),
 ) -> PredictionResponse:
+    """ Given a news title, the API will return REAL or FAKE news, including  confidence score"""
     return service.predict(payload)
 
 
@@ -19,4 +20,5 @@ def predict_batch(
     payload: TitlesInput,
     service: FakeNewsDetectorService = Depends(get_fake_news_detector_service),
 ) -> PredictionsResponse:
+    """ Given several news title, the API will return REAL or FAKE news for each, including  confidence score"""
     return service.predict_batch(payload)

@@ -92,10 +92,10 @@ def clean_text(tokens: list[str]) -> list[str]:
     cleaned_tokens: list[str] = []
     for token in tokens:
         token = str(token).lower()
-        token = re.sub(r"<[^>]+>|&[a-zA-Z]+;", "", token)
+        token = re.sub(r"<[^>]+>|&[a-zA-Z]+;", "", token) #remove html tags
         if re.search(r"https?://\S+|www\.\S+", token):
             continue
-        if token.startswith("@") or token.startswith("#"):
+        if token.startswith("@") or token.startswith("#"): #remove user mentions
             continue
         token = re.sub(r"[^a-z]", "", token)
         if token:

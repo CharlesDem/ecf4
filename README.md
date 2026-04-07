@@ -1,5 +1,10 @@
 # fake news detector
 
+## objectif
+
+Le but de ce projet est d'entrainer un modèle de machine learning avec le dataset https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news. 
+L'inférence de ce modèle doit être mis à disposition via une API (FastApi)
+
 ## prerequis
 
 - docker desktop (avec docker compose)
