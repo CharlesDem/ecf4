@@ -6,6 +6,17 @@
 - python 3.11 (si lancement sans docker)
 - visual studio code + extension python + extension jupyter (pour le notebook)
 
+## lancement notebook
+
+Le notebook ecf_fake_news.ipynb contient les traitements et recherches sur les modèles. Avant de lancer jupyter, il peut 
+être nécessaire de lancer la commande suivante :
+
+```powershell
+ python -m spacy download en_core_web_sm
+```
+
+Relancer le notebook va overrider les modèles sauvegardés et distribués avec le repo.
+
 ## lancement de l'api
 
 ### option 1 - docker (recommande)
